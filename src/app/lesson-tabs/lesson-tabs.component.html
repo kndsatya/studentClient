@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs wbdv-list-nav-tabs">
+  <li *ngFor="let lesson of lessons" class="nav-item"
+      routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lesson.id}}/topic">
+    <a class="nav-link wbdv-label-text"
+       [ngClass]="{'wbdv-active-style': lesson.id == selectedLessonId}"
+       [ngClass]="{'wbdv-lesson-style': lesson.id != selectedLessonId}"
+       role="btn">{{lesson.lessonName}}
+    </a>
+  </li>
+</ul>

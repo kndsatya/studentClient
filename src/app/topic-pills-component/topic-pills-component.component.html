@@ -1,0 +1,9 @@
+<ul class="nav nav-pills">
+  <li *ngFor="let topic of topics" class="nav-item"
+  routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lessonId}}/topic/{{topic.id}}/widget">
+  <a class="nav-link wbdv-button topicStyle"
+     [ngClass]="{'active': topic.id == selectedTopicId}">
+    {{topic.topicName}}
+  </a>
+  </li>
+</ul>

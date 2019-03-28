@@ -1,0 +1,70 @@
+.nav-item-margin {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.wbdv-body {
+  background-color: #eeeeee;
+}
+
+a { color:white } /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none; color:white; }
+a:hover { text-decoration: none; color:white; }
+a:focus { text-decoration: none; color:white; }
+a:hover, a:active { text-decoration: none; color:white; }
+
+.header{
+  color: dimgrey;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.wbdv-navigator-description {
+  color:white;
+}
+.data{
+  background-color: white;
+}
+
+.wbdv-button{
+  cursor: pointer;
+}
+.calendar{
+  background-color: #eeeeee;
+  color: dimgrey;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+  max-bottom: 15px;
+}
+
+.fa-document-color {
+  color: #007bff;
+  background-color: white;
+}
+
+.sb-site-container {
+  background-color: #eeeeee;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: white;
+}
+
+.wbdv-card-text {
+
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+
+.wbdv-card-bottom {
+  margin-top: 10px;
+}

@@ -1,0 +1,51 @@
+<div class="wbdv-widgets">
+  <div *ngFor="let widget of widgets">
+    <div *ngIf="widget.widgetType == 'HEADING'"
+         class="wbdv-widget-list col-sm-12">
+      <h1 *ngIf="widget.size==1">{{widget.text}}</h1>
+      <h2 *ngIf="widget.size==2">{{widget.text}}</h2>
+      <h3 *ngIf="widget.size==3">{{widget.text}}</h3>
+      <h4 *ngIf="widget.size==4">{{widget.text}}</h4>
+      <h5 *ngIf="widget.size==5">{{widget.text}}</h5>
+      <h6 *ngIf="widget.size==6">{{widget.text}}</h6>
+    </div>
+
+    <div *ngIf="widget.widgetType == 'LIST'" class="wbdv-widget-list col-sm-12">
+      <div *ngIf="widget.ordered">
+        <ol>
+          <li *ngFor="let item of widget.items">
+            {{item}}
+          </li>
+        </ol>
+      </div>
+      <div *ngIf="!widget.ordered">
+        <ul>
+          <li *ngFor="let item of widget.items">
+            {{item}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngIf="widget.widgetType == 'LINK'" class="wbdv-widget-list col-sm-12">
+      <div>
+        <a href={{widget.href}}>{{widget.linkText}}</a>
+      </div>
+    </div>
+
+
+    <div *ngIf="widget.widgetType == 'IMAGE'" class="wbdv-widget-list col-sm-12">
+      <div>
+        <img src={{widget.src}} class="img-fluid"
+             alt="Responsive image"/>
+      </div>
+    </div>
+
+    <div *ngIf="widget.widgetType == 'PARAGRAPH'" class="wbdv-widget-list col-sm-12">
+      <div>
+        <p>{{widget.text}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

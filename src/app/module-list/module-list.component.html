@@ -1,0 +1,9 @@
+<ul class="list-group wbdv-column-nav-pills">
+  <li *ngFor="let module of modules"
+      routerLink="/course/{{courseId}}/module/{{module.id}}/lesson"
+      class="list-group-item wbdv-label-text wbdv-module"
+      [ngClass]="{'wbdv-active': module.id == selectedModuleId}"
+      [ngClass]="{'wbdv-inactive': module.id != selectedModuleId}">
+       {{module.moduleName}}
+  </li>
+</ul>
