@@ -2,18 +2,18 @@ export class TopicServiceClient {
 
 
   findTopicsForLesson(lessonId) {
-    return fetch('http://localhost:8081/api/lesson/' + lessonId + '/topic')
+    return fetch('https://lit-temple-21288.herokuapp.com/api/lesson/' + lessonId + '/topic')
       .then(response => response.json());
   }
 
   findAllTopics() {
-    return fetch('http://localhost:8081/api/topic')
+    return fetch('https://lit-temple-21288.herokuapp.com/api/topic')
       .then(response => response.json());
   }
 
   findTopicById(topicId) {
 
-    return fetch('http://localhost:8081/api/topic/' + topicId)
+    return fetch('https://lit-temple-21288.herokuapp.com/api/topic/' + topicId)
       .then(response => response.json());
   }
 }

@@ -1,5 +1,5 @@
 export class ModuleServiceClient {
-  MODULE_URL = 'http://localhost:8081/api/courses/COURSE_ID/modules';
+  MODULE_URL = 'https://lit-temple-21288.herokuapp.com/api/courses/COURSE_ID/modules';
 
   findModulesForCourse(courseId) {
     return fetch(this.MODULE_URL.replace('COURSE_ID', courseId))
@@ -7,13 +7,13 @@ export class ModuleServiceClient {
   }
 
   findAllModules() {
-    return fetch('http://localhost:8081/api/modules')
+    return fetch('https://lit-temple-21288.herokuapp.com/api/modules')
       .then(response => response.json());
   }
 
   findModuleById(moduleId) {
 
-    return fetch('http://localhost:8081/api/modules/' + moduleId)
+    return fetch('https://lit-temple-21288.herokuapp.com/api/modules/' + moduleId)
       .then(response => response.json());
   }
 }

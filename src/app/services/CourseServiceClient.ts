@@ -1,6 +1,6 @@
 export class CourseServiceClient {
 
-  COURSE_URL = 'http://localhost:8081/api/courses';
+  COURSE_URL = 'https://lit-temple-21288.herokuapp.com/api/courses';
 
   findAllCourses = () => {
     return fetch(this.COURSE_URL)

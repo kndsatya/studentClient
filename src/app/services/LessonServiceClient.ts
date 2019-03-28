@@ -2,18 +2,18 @@ export class LessonServiceClient {
 
 
   findLessonsForModule(moduleId) {
-    return fetch('http://localhost:8081/api/module/' + moduleId + '/lesson')
+    return fetch('https://lit-temple-21288.herokuapp.com/api/module/' + moduleId + '/lesson')
       .then(response => response.json());
   }
 
   findAllLessons() {
-    return fetch('http://localhost:8081/api/lesson')
+    return fetch('https://lit-temple-21288.herokuapp.com/api/lesson')
       .then(response => response.json());
   }
 
   findLessonById(lessonId) {
 
-    return fetch('http://localhost:8081/api/lesson/' + lessonId)
+    return fetch('https://lit-temple-21288.herokuapp.com/api/lesson/' + lessonId)
       .then(response => response.json());
   }
 }
