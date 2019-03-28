@@ -3,6 +3,17 @@ export class ModuleServiceClient {
 
   findModulesForCourse(courseId) {
     return fetch(this.MODULE_URL.replace('COURSE_ID', courseId))
-      .then( response => response.json());
+      .then(response => response.json());
+  }
+
+  findAllModules() {
+    return fetch('http://localhost:8081/api/modules')
+      .then(response => response.json());
+  }
+
+  findModuleById(moduleId) {
+
+    return fetch('http://localhost:8081/api/modules/' + moduleId)
+      .then(response => response.json());
   }
 }
